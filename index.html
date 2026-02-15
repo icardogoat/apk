@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rei dos Canais - Baixar App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #00A8E1;
+            --bg: #0F171E;
+            --card: #1B2530;
+            --text: #ffffff;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            text-align: center;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 600px;
+            padding: 40px 20px;
+            z-index: 1;
+        }
+
+        .logo-container {
+            margin-bottom: 30px;
+            animation: fadeInDown 1s ease-out;
+        }
+
+        .logo {
+            width: 150px;
+            height: auto;
+            border-radius: 30px;
+            box-shadow: 0 10px 30px rgba(0, 168, 225, 0.3);
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 900;
+            margin: 0;
+            background: linear-gradient(90deg, #fff, var(--primary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        p.tagline {
+            font-size: 1.2rem;
+            color: #8197a4;
+            margin-top: 10px;
+            margin-bottom: 40px;
+        }
+
+        .download-card {
+            background-color: var(--card);
+            padding: 30px;
+            border-radius: 24px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .version-badge {
+            display: inline-block;
+            background: rgba(0, 168, 225, 0.1);
+            color: var(--primary);
+            padding: 6px 16px;
+            border-radius: 100px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+        }
+
+        .btn-download {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--primary);
+            color: white;
+            text-decoration: none;
+            padding: 18px 32px;
+            border-radius: 16px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 20px rgba(0, 168, 225, 0.3);
+        }
+
+        .btn-download:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(0, 168, 225, 0.5);
+            filter: brightness(1.1);
+        }
+
+        .btn-download svg {
+            margin-right: 12px;
+        }
+
+        .info {
+            margin-top: 30px;
+            color: #8197a4;
+            font-size: 0.9rem;
+        }
+
+        /* Background effects */
+        .glow {
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(0, 168, 225, 0.15) 0%, transparent 70%);
+            z-index: 0;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            pointer-events: none;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="glow"></div>
+
+    <div class="container">
+        <div class="logo-container">
+            <!-- Caso você queira usar o ícone aqui, pode colocar o link dele depois que subir pro github -->
+            <img src="https://raw.githubusercontent.com/icardogoat/apk/main/assets/images/icone.png"
+                alt="Rei dos Canais" class="logo"
+                onerror="this.src='https://cdn-icons-png.flaticon.com/512/716/716429.png'">
+        </div>
+
+        <h1>Rei dos Canais</h1>
+        <p class="tagline">Assistir futebol e canais grátis no seu Android.</p>
+
+        <div class="download-card">
+            <div class="version-badge" id="version-label">Versão 1.0.0</div>
+
+            <a href="https://github.com/icardogoat/apk/releases/download/v1.0.0/app-release.apk" class="btn-download"
+                id="download-link">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 15L12 3M12 15L8 11M12 15L16 11" stroke="white" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    <path
+                        d="M2 17L2.42119 19.6384C2.53383 20.3423 3.14099 20.8684 3.85469 20.8684H20.1453C20.859 20.8684 21.4662 20.3423 21.5788 19.6384L22 17"
+                        stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                Baixar Aplicativo (APK)
+            </a>
+
+            <p class="info">Tamanho: ~20MB | Requer Android 5.0+</p>
+        </div>
+
+        <p class="info" style="margin-top: 50px;">
+            Dúvidas? <br>
+            O app é atualizado automaticamente ao ser aberto.
+        </p>
+    </div>
+
+    <script>
+        // Script para ler o version.json e atualizar o link da página automaticamente
+        fetch('version.json')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('version-label').innerText = 'Versão ' + data.version;
+                document.getElementById('download-link').href = data.url;
+            })
+            .catch(err => console.error('Erro ao buscar versão:', err));
+    </script>
+</body>
+
+</html>
